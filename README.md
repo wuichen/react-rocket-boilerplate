@@ -1,5 +1,5 @@
-react-rocket
-============
+react-rocket-boilerplate
+========================
 
 A boilerplate using ReactJS (along with React Router and RefluxJS), SASS, Gulp, and Browserify that also utilizes Gulp best practices from [this resource](https://github.com/greypants/gulp-starter).
 
@@ -148,3 +148,11 @@ All of the Gulp processes mentioned above are run automatically when any of the 
 Just as there is the `gulp dev` task for development, there is also a `gulp prod` task for putting your project into a production-ready state. This will run each of the tasks, while also adding the image minification task discussed above. There is also an empty `gulp deploy` task that is included when running the production task. This deploy task can be fleshed out to automatically push your production-ready site to your hosting setup.
 
 **Reminder:** When running the production task, gulp will not fire up the express server and serve your index.html. This task is designed to be run before the `deploy` step that may copy the files from `/build` to a production web server.
+
+---
+
+### Testing
+
+This boilerplate also includes a simple framework for unit testing via Facebook's [Jest](https://facebook.github.io/jest/) library. All of the tests can be run using the command `npm test`.
+
+Jest automatically detects any files located within the `__tests__` directory and runs them, first using the `preprocessor.js` in the root of the boilerplate directory. Read the [Jest Docs](https://facebook.github.io/jest/docs/tutorial.html) for more information.

@@ -1,22 +1,24 @@
 {
-  "name": "react-browserify-gulp-boilerplate",
+  "name": "react-rocket-boilerplate",
   "version": "0.1.0",
   "author": "Jake Marsh <jakemmarsh@gmail.com>",
-  "description": "Boilerplate using React, Browserify, SASS, and Gulp.",
+  "description": "A boilerplate using ReactJS (along with React Router and RefluxJS), SASS, Gulp, and Browserify",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jakemmarsh/react-browserify-gulp-boilerplate.git"
+    "url": "https://github.com/jakemmarsh/react-rocket-boilerplate.git"
   },
   "keywords": [
     "gulp",
     "browserify",
-    "react",
+    "reactjs",
+    "refluxjs",
+    "react-router",
     "sass",
     "boilerplate"
   ],
-  "private": true,
+  "private": false,
   "engines": {
-    "node": ">=0.10.26"
+    "node": ">=0.12.x"
   },
   "devDependencies": {
     "browserify": "^5.10.0",
@@ -44,6 +46,20 @@
     "when": "^3.7.2",
     "reflux": "^0.2.5",
     "superagent": "^0.21.0",
-    "lodash": "^3.3.1"
+    "lodash": "^3.3.1",
+    "react-tools": "^0.12.2",
+    "jest-cli": "^0.4.0"
+  },
+  "jest": {
+    "rootDir": ".",
+    "scriptPreprocessor": "<rootDir>/preprocessor.js",
+    "testPathDirs": ["<rootDir>"],
+    "testDirectoryName": "__tests__",
+    "testFileExtensions": ["js"],
+    "moduleFileExtensions": ["js", "json"],
+    "unmockedModulePathPatterns": ["<rootDir>/node_modules/react"]
+  },
+  "scripts": {
+    "test": "jest"
   }
 }
