@@ -6,9 +6,9 @@ var DocumentTitle = require('react-document-title');
 
 var SearchPage = React.createClass({
 
-  propTypes: {
-    currentUser: React.PropTypes.object.isRequired
-  },
+  // propTypes: {
+  //   currentUser: React.PropTypes.object.isRequired
+  // },
 
   render: function() {
     return (
@@ -22,7 +22,7 @@ var SearchPage = React.createClass({
           <div>
             <Link to="Home">Back to Home</Link>
           </div>
-
+          
         </section>
       </DocumentTitle>
     );

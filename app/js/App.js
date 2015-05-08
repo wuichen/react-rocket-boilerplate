@@ -13,28 +13,28 @@ var App = React.createClass({
 
   mixins: [Reflux.ListenerMixin],
 
-  getInitialState: function() {
-    return {
-      currentUser: {}
-    };
-  },
+  // getInitialState: function() {
+  //   return {
+  //     currentUser: {}
+  //   };
+  // },
 
-  _onUserChange: function(err, user) {
-    if ( err ) {
-      this.setState({ error: err });
-    } else {
-      this.setState({ currentUser: user || {}, error: null });
-    }
-  },
+  // _onUserChange: function(err, user) {
+  //   if ( err ) {
+  //     this.setState({ error: err });
+  //   } else {
+  //     this.setState({ currentUser: user || {}, error: null });
+  //   }
+  // },
 
-  componentWillMount: function() {
-    console.log('About to mount App');
-  },
+  // componentWillMount: function() {
+  //   console.log('About to mount App');
+  // },
 
-  componentDidMount: function() {
-    CurrentUserActions.checkLoginStatus(this._onUserChange);
-    this.listenTo(CurrentUserStore, this._onUserChange);
-  },
+  // componentDidMount: function() {
+  //   CurrentUserActions.checkLoginStatus(this._onUserChange);
+  //   this.listenTo(CurrentUserStore, this._onUserChange);
+  // },
 
   render: function() {
     return (
@@ -43,9 +43,7 @@ var App = React.createClass({
         <Header />
 
         <RouteHandler params={this.props.params}
-                      query={this.props.query}
-                      currentUser={this.state.currentUser} />
-
+                      query={this.props.query}/>
         <Footer />
 
       </div>

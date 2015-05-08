@@ -6,9 +6,12 @@ var DocumentTitle = require('react-document-title');
 
 var HomePage = React.createClass({
 
-  propTypes: {
-    currentUser: React.PropTypes.object.isRequired
-  },
+  // propTypes: {
+  //   currentUser: React.PropTypes.object.isRequired
+  // },
+  // getInitialState: function() {
+
+  // },
 
   render: function() {
     return (
